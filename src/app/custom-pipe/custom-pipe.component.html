@@ -18,7 +18,12 @@
                   </tr>
                 </thead>
                 <tbody>
-                  <tr *ngFor="let user of users; let i = index">
+                  <tr
+                    *ngFor="
+                      let user of users | sortString : 'name' : 'asc';
+                      let i = index
+                    "
+                  >
                     <td class="fw-bold">{{ i }}</td>
                     <td>{{ user.name }}</td>
                     <td>{{ user.surname }}</td>
