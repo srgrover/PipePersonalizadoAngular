@@ -4,11 +4,13 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { CustomPipeComponent } from './custom-pipe/custom-pipe.component';
+import { sortStringPipe } from './pipes/sortString.pipe';
 
 @NgModule({
   declarations: [
     AppComponent,
-    CustomPipeComponent
+    CustomPipeComponent,
+    sortStringPipe
   ],
   imports: [
     BrowserModule,
