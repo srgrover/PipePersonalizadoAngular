@@ -11,8 +11,8 @@
                 <thead>
                   <tr>
                     <th scope="col">#</th>
-                    <th scope="col">Name</th>
-                    <th scope="col">Surname</th>
+                    <th scope="col" (click)="criteria = 'name'">Name</th>
+                    <th scope="col" (click)="criteria = 'surname'">Surname</th>
                     <th scope="col">Email</th>
                     <th scope="col">Age</th>
                   </tr>
@@ -20,7 +20,7 @@
                 <tbody>
                   <tr
                     *ngFor="
-                      let user of users | sortString : 'name' : 'asc';
+                      let user of users | sortString : criteria : sortBy;
                       let i = index
                     "
                   >

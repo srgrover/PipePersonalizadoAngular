@@ -9,6 +9,8 @@ import { User } from '../Models/User';
 })
 export class CustomPipeComponent implements OnInit {
   users: User[] = [];
+  criteria: string = "surname";
+  sortBy: string = "desc";
 
   constructor(private userSV: UsersService) { }
 
