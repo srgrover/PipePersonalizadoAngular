@@ -11,9 +11,63 @@
                 <thead>
                   <tr>
                     <th scope="col">#</th>
-                    <th scope="col" (click)="criteria = 'name'">Name</th>
-                    <th scope="col" (click)="criteria = 'surname'">Surname</th>
-                    <th scope="col">Email</th>
+                    <th scope="col" (click)="criteria = 'name'">
+                      Name
+                      <button
+                        *ngIf="sortBy === 'desc'"
+                        (click)="sortBy = 'asc'"
+                        type="button"
+                        class="btn btn-light"
+                      >
+                        &darr;
+                      </button>
+                      <button
+                        *ngIf="sortBy === 'asc'"
+                        (click)="sortBy = 'desc'"
+                        type="button"
+                        class="btn btn-light"
+                      >
+                        &uarr;
+                      </button>
+                    </th>
+                    <th scope="col" (click)="criteria = 'surname'">
+                      Surname
+                      <button
+                        *ngIf="sortBy === 'desc'"
+                        (click)="sortBy = 'asc'"
+                        type="button"
+                        class="btn btn-light"
+                      >
+                        &darr;
+                      </button>
+                      <button
+                        *ngIf="sortBy === 'asc'"
+                        (click)="sortBy = 'desc'"
+                        type="button"
+                        class="btn btn-light"
+                      >
+                        &uarr;
+                      </button>
+                    </th>
+                    <th scope="col" (click)="criteria = 'name'">
+                      Email
+                      <button
+                        *ngIf="sortBy === 'desc'"
+                        (click)="sortBy = 'asc'"
+                        type="button"
+                        class="btn btn-light"
+                      >
+                        &darr;
+                      </button>
+                      <button
+                        *ngIf="sortBy === 'asc'"
+                        (click)="sortBy = 'desc'"
+                        type="button"
+                        class="btn btn-light"
+                      >
+                        &uarr;
+                      </button>
+                    </th>
                     <th scope="col">Age</th>
                   </tr>
                 </thead>
